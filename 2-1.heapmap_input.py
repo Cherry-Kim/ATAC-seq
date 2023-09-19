@@ -20,7 +20,6 @@ def step3_input():
   chr1    10578   10579   975-VEH_S1_peak_1       6.1468
     os.system('cat OSI_VEH.specific2.out VEH_OSI.overlap2.out VEH_OSI.specific2.out > VEH_OSI.sum.bed')
 
-
 def step4_Heatmap():
     #Deeptools
     os.system('computeMatrix reference-point --referencePoint center -S VEH_S1_dedup.bw OSI_S7_dedup.bw -R VEH_OSI.sum.bed -b 2000 -a 2000 --skipZeros --numberOfProcessors 96 -o VEH_OSI_peaks.subtractCPM.gz --outFileSortedRegions VEH_OSI_peaks.subtractCPM.bed')
